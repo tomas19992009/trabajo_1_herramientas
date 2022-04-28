@@ -1,0 +1,44 @@
+html,body{
+	height:100%
+}
+
+header{
+	display:block;
+	background:#112854;
+	padding:30px 10px;
+	color:azure;
+}
+
+section{
+	width:80%;
+	//background:#9a9797;
+	float:right;
+	overflow: auto;
+	padding-bottom:30px;
+	padding-top:10px;
+}
+
+aside{
+	float:left;
+	border:1px solid red;
+	width:18%;
+	border:1px solid red;
+	background:#1c5353;
+	height:100%;
+}
+footer{
+	position:relative;
+	margin-top:-50px;
+	height:50px;
+	padding:5px 0px;
+	clear: both;
+	background:#9a9797;
+	text-align:center;
+	color:#fff;
+}
+figure{
+	//float:left;
+	display:table;
+	margin:0 auto;
+	padding:15px 15px;
+}

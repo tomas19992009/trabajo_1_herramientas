@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Prueba de validación con JS</title>
+<script>
+function validarFormulario(){
+var txtNombre = document.getElementById('nombre').value;
+var cmbSelector = document.getElementById('selector').selectedIndex;
+var chkEstado = document.getElementById('checkBox');
+//Test campo obligatorio
+if(txtNombre == null || txtNombre.length == 0 ){
+alert('ERROR: debes ingresar un nombre');
+return false;
+}
+//Test comboBox
+if(cmbSelector == null || cmbSelector == 0){
+alert('ERROR: Debe seleccionar una opción de animales');
+return false;
+}
+//Test checkBox
+if(!chkEstado.checked){
+alert('ERROR: Debe seleccionar un deporte');
+return false;
+}
+alert('DATOS CORRECTOS, ENVIANDO INFORMACIÓN AL SERVIDOR');
+return true;
+}
+</script>
+</head>
+<body>
+<form action="" onsubmit="return validarFormulario()">
+<label for="nombre">
+<span>Nombre:</span>
+</label>
+<input id="nombre" name="nombre" type="text">
+<br><br>
+<label for="selector">
+<span>Selecciona un animal:</span>
+</label>
+<select id="selector" name="selector">
+<option value="">Gallina</option>
+<option value="1">loro</option>
+<option value="2">Elefante</option>
+<option value="3">leon</option>
+</select>
+<br><br>
+<label for="checkBox">
+<span> deportes:</span>
+</label>
+<input id="checkBox" name="checkBox" type="checkbox"> Haz clic en mí
+<br><br>
+<input type="submit" value="ENVIAR">
+</form>
+</body>
+</html>
